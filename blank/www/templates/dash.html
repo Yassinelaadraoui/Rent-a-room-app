@@ -1,0 +1,52 @@
+
+
+<ion-view title="Dash" id="page2">
+  <search-bar ng-model="search"></search-bar>
+
+  <ion-content padding="true"  class="hasheader" >
+
+
+    <div class="list card" id="dash-card21">
+      <ion-item class="item-avatar" id="dash-list-item3">
+        <h2>Item</h2>
+      </ion-item>
+
+      <ion-slide-box style="" on-slide-changed="slideHasChanged($index)">
+        <ion-slide >
+          <img width:500px src="https://avatars0.githubusercontent.com/u/21017649?v=3&s=88">
+        </ion-slide>
+        <ion-slide>
+          <img src="https://avatars3.githubusercontent.com/u/3864531?v=3&s=88">
+        </ion-slide>
+
+    </ion-slide-box>
+  
+
+
+      <div class="item item-body" id="dash-list-item-container2">
+        <div id="dash-markdown2" class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#000000;">Some friendly
+            <strong>markdown</strong>Some friendly
+            <strong>markdown</strong>Some friendly
+            <strong>markdown</strong>Some friendly
+            <strong>markdown</strong>Some friendly
+            <strong>markdown</strong>Some friendly
+            <strong>markdown</strong>Some friendly
+            <strong>markdown</strong>Some friendlyd
+            <strong>markdown</strong>
+          </p>
+        </div>
+        <ion-list id="dash-list2">
+          <ion-item class="assertive" id="dash-list-item4" ui-sref="tabsController.post">Read more</ion-item>
+        </ion-list>
+      </div>
+    </div>
+
+
+  </ion-content>
+  <div style="position:fixed; right:2%;bottom:7%; ">
+    <div >
+        <a ui-sref="tabsController.addAPost" class="btn-floating btn-large waves-effect waves-light red"><i   class="material-icons">add</i></a>
+    </div>
+  </div>
+</ion-view>
