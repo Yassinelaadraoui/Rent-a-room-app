@@ -7,25 +7,11 @@ function ($scope, $stateParams) {
   $scope.data = {
    show: false
  };
-
-
-
- $scope.showHeader = function(e)  {
-   $scope.data = {
-     show: true
-   };
-
- }
-
-   $scope.hideHeader = function(e)  {
-     $scope.data = {
-       show: false
-     };
-
-   }
-
+ $scope.hasFilters=false;
+$scope.openFilters= function(hasFilters){
+  $scope.hasFilters = !$scope.hasFilters;
+}
 }])
-
 .controller('myMessagesCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
@@ -46,7 +32,7 @@ function ($scope, $stateParams) {
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
 function ($scope, $stateParams) {
-
+$scope.showingmessage=0;
 
 }])
 

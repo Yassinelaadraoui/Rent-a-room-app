@@ -33,6 +33,17 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
   This directive is used to disable the "drag to open" functionality of the Side-Menu
   when you are dragging a Slider component.
 */
+.directive('hideTabs', function($rootScope) {
+  return {
+      restrict: 'A',
+      link: function($scope, $el) {
+          $rootScope.hideTabs = 'tabs-item-hide';
+          $scope.$on('$destroy', function() {
+              $rootScope.hideTabs = '';
+          });
+      }
+  };
+})
 .directive('disableSideMenuDrag', ['$ionicSideMenuDelegate', '$rootScope', function($ionicSideMenuDelegate, $rootScope) {
     return {
         restrict: "A",
