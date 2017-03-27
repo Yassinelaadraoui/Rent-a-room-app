@@ -30,26 +30,32 @@
           <strong>Rules of Procedure</strong>: blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla</p>
       </div>
     </div>
-    <div class="cover">
-        <i style="position:relative;top:4%; font-size:20px; " class="ion-close-round"></i>
+    <div ng-if="hide" class="cover">
+        <i ng-click="hidecover()" style="position:relative;top:4%; font-size:20px; " class="ion-close-round"></i>
         <ul class="list">
     <li class="item">
-      ...
+        <i class="ion-wifi"></i>Wifi
     </li><li class="item">
-      ...
+        <i class="ion-wifi"></i>Wifi
     </li>
     <li class="item">
-      ...
+        <i class="ion-wifi"></i>Wifi
     </li>
     <li class="item">
-      ...
+        <i class="ion-wifi"></i>Wifi
     </li>
     <li class="item">
-      ...
+        <i class="ion-wifi"></i>Wifi
     </li>
       </ul>
     </div>
-      <div ng-click="" class="amenties">
+    <center>
+      <br>
+      Rating for The user
+      <rating style="color:#0a9dc7"  ng-model="rating.rate" max="rating.max"></rating>
+
+    </center>
+      <div ng-click="hidecover()" class="amenties">
           <div class="lister">
               <i class="ion-wifi"></i>Wifi
           </div>

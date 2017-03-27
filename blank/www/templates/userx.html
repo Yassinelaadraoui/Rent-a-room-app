@@ -1,3 +1,29 @@
 <ion-view title="Userx" id="page8">
-  <ion-content padding="true" class="has-header"></ion-content>
+  <button ng-click="$ionicGoBack()" class="button back-button buttons button-clear header-item"><i class="icon ion-android-arrow-back"></i> <span class="back-text"></span></button>
+  <ion-content padding="true" class="has-header">
+    <ion-list id="">
+      <ion-item  class=" messages item-avatar positive"  >
+        <h2positive >
+          <img style="display:inline" width="10%" height="10%" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/220px-User_icon_2.svg.png">
+          <p style="display:inline">my message</p>
+        </h2positive>
+      </ion-item>
+      <ion-item  class=" messages item-avatar positive"  >
+        <h2positive >
+          <img style="display:inline" width="10%" height="10%" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/220px-User_icon_2.svg.png">
+          <p style="display:inline; ">my message</p>
+        </h2positive>
+      </ion-item>
+
+    </ion-list>
+
+    <footer id="chatfooter">
+      <label  id="chatinput" class="item-input-wrapper textbox-search">
+          <i class="icon ion-ios7-search placeholder-icon"></i>
+          <input id="searchinput" type="search" placeholder="Search">
+          <button  id="sendbutton" class="btn">Send</button>
+      </label>
+
+    </footer>
+  </ion-content>
 </ion-view>
