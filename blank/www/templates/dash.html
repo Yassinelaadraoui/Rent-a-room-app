@@ -5,11 +5,18 @@
         <div id="container" class="bar bar-header item-input-inset" ng-if="hasFilters">
             <label  id="label" class="item-input-wrapper textbox-search">
                 <i class="icon ion-ios7-search placeholder-icon"></i>
-                <input id="searchinput" type="search" placeholder="Search">
+                <input ng-model="searchedcity" id="searchinput" type="search" placeholder="Search">
             </label>
 
         </div>
+
     </ion-nav-buttons>
+    <script src="https://www.gstatic.com/firebasejs/3.7.3/firebase.js"></script>
+		<script src="js/fire.js"></script>
+
+		<script src="https://cdn.firebase.com/libs/firebaseui/1.0.0/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/1.0.0/firebaseui.css" />
+    <script src="js/auth.js"></script>
     <ion-nav-title ng-show="!hasFilters">
         Users
     </ion-nav-title>
@@ -21,9 +28,9 @@
   <ion-content padding="true"  class="hasheader" >
 
 
-    <div class="list card" id="dash-card21">
+    <div ng-repeat="post in posts" class="list card" id="dash-card21">
       <ion-item class="item-avatar" id="dash-list-item3">
-        <h2>Item</h2>
+        <h2>{{post.username}}</h2>
       </ion-item>
 
       <ion-slide-box style="" on-slide-changed="slideHasChanged($index)">

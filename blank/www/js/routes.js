@@ -6,7 +6,7 @@ angular.module('app.routes', [])
   // Learn more here: https://github.com/angular-ui/ui-router
   // Set up the various states which the app can be in.
   // Each state's controller can be found in controllers.js
-  
+
   $stateProvider
 
 
@@ -66,7 +66,15 @@ angular.module('app.routes', [])
       }
     }
   })
-
+  .state('tabsController.login', {
+    url: '/login',
+    views: {
+      'tab2': {
+        templateUrl: 'templates/login.html',
+        controller: ''
+      }
+    }
+  })
   .state('tabsController.editProfile', {
     url: '/editprofil',
     views: {
@@ -87,7 +95,7 @@ angular.module('app.routes', [])
     }
   })
 
-$urlRouterProvider.otherwise('/page1/dash')
+$urlRouterProvider.otherwise('/page1/login')
 
 
 
