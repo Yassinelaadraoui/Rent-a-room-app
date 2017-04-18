@@ -5,8 +5,10 @@
         <div id="container" class="bar bar-header item-input-inset" ng-if="hasFilters">
             <label  id="label" class="item-input-wrapper textbox-search">
                 <i class="icon ion-ios7-search placeholder-icon"></i>
-                <input ng-model="searchedcity" id="searchinput" type="search" placeholder="Search">
+                <input  ng-model="searchedcity.search" id="searchinput" type="search" placeholder="Search">
+
             </label>
+            
 
         </div>
 
@@ -27,8 +29,10 @@
 
   <ion-content padding="true"  class="hasheader" >
 
+<div ng-repeat="post in posts">
 
-    <div ng-repeat="post in posts" class="list card" id="dash-card21">
+
+    <div ng-if="show($index)"  class="list card" id="dash-card21">
       <ion-item class="item-avatar" id="dash-list-item3">
         <h2>{{post.username}}</h2>
       </ion-item>
@@ -64,7 +68,7 @@
       </div>
     </div>
 
-
+</div>
   </ion-content>
   <div style="position:fixed; right:2%;bottom:7%; ">
     <div >

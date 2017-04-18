@@ -11,9 +11,31 @@ function ($http, $scope, $stateParams) {
 $scope.openFilters= function(hasFilters){
   $scope.hasFilters = !$scope.hasFilters;
 }
-$scope.searchedcity
+
+$scope.searchedcity={search:""};
+$scope.conditions = 1;
+
+$scope.show=  function($index)  {
+        if($scope.searchedcity.search == "")
+                    return 1;
+
+
+
+        if($scope.posts[$index].username == $scope.searchedcity.search){
+        
+
+          return 1;
+
+        }else {
+          $scope.conditions= 0;
+          return 0;
+        }
+        console.log("over");
+
+}
+
 firebase.database().ref('/posts/').once('value').then(function(snapshot) {
-  console.log(snapshot.val());
+
   $scope.posts = snapshot.val();
 
   // ...
