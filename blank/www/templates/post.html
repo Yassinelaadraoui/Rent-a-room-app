@@ -2,32 +2,53 @@
   <ion-content  padding="" class="" >
     <ion-list id="post-list3">
       <ion-item class="item-thumbnail-left positive" id="post-list-item9">
-        <h2positive>UserX</h2positive>
+        <h2positive>{{clickedpost.user}}</h2positive>
       </ion-item>
     </ion-list>
-    <div style="margin: 0px; line-height: 250px; background-color: rgb(232, 235, 239); text-align: center;">
-      <i class="icon ion-image" style="font-size: 64px; color: rgb(136, 136, 136); vertical-align: middle;"></i>
-    </div>
+    <ion-slide-box style="" on-slide-changed="slideHasChanged($index)">
+      <ion-slide >
+        <img width="100%" height="100%"  ng-src='{{clickedpost.pictures["img1"]}}'>
+      </ion-slide>
+      <ion-slide>
+        <img width="100%" height="100%" ng-src='{{clickedpost.pictures["img2"]}}'>
+      </ion-slide>
+      <ion-slide>
+        <img width="100%" height="100%" ng-src='{{clickedpost.pictures["img3"]}}'>
+      </ion-slide>
+
+  </ion-slide-box>
     <div ng-if="showingmessage" id="post-container1">
       <form id="post-form8" class="list">
         <label class="item item-input" id="post-input13">
           <span class="input-label">My message</span>
-          <input type="text" placeholder="">
+          <input ng-model="rent.message" type="text" placeholder="">
         </label>
-        <button id="post-button9" style="border-radius:20px 20px 20px 20px;" class="button button-assertive  button-block">Send</button>
+        <button ng-click="messaging()" id="post-button9" style="border-radius:20px 20px 20px 20px;" class="button button-assertive  button-block">Send</button>
       </form>
     </div>
     <button ng-click="showingmessage=!showingmessage" id="post-button8" style="border-radius:20px 20px 20px 20px;" class="button button-assertive  button-block button-outline">Send me A text</button>
     <div class="item item-body" id="post-list-item-container5">
       <div id="post-markdown6" class="show-list-numbers-and-dots">
         <p style="margin-top:0px;color:#000000;">
-          <strong>Description</strong>: blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla</p>
+          <strong>Description</strong>:{{clickedpost.description}}</p>
       </div>
     </div>
     <div class="item item-body" id="post-list-item-container10">
       <div id="post-markdown12" class="show-list-numbers-and-dots">
         <p style="margin-top:0px;color:#000000;">
-          <strong>Rules of Procedure</strong>: blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla</p>
+          <strong>Price</strong>:{{clickedpost.price}}</p>
+      </div>
+    </div>
+    <div class="item item-body" id="post-list-item-container10">
+      <div id="post-markdown12" class="show-list-numbers-and-dots">
+        <p style="margin-top:0px;color:#000000;">
+          <strong>Price</strong>:{{clickedpost.price}}</p>
+      </div>
+    </div>
+    <div class="item item-body" id="post-list-item-container10">
+      <div id="post-markdown12" class="show-list-numbers-and-dots">
+        <p style="margin-top:0px;color:#000000;">
+          <strong>Location</strong>: {{clickedpost.location["street"]}}, {{clickedpost.location["postalcode"]}}, {{clickedpost.location["city"]}}</p>
       </div>
     </div>
     <div ng-if="hide" class="cover">

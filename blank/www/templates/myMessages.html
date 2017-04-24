@@ -1,41 +1,12 @@
-<ion-view title="My Messages" id="page3">
+<ion-view  data-ng-init=" loadMessage()" title="My Messages" id="page3">
   <ion-content padding="true" class="has-header">
-    <ion-list id="myMessages-list6">
-      <ion-item class="item-avatar positive" id="myMessages-list-item16" ui-sref="tabsController.userx">
-        <h2positive>User W
-          <p>my message</p>
-        </h2positive>
-      </ion-item>
-      <ion-item class="item-avatar positive" id="myMessages-list-item17">
-        <h2positive>User W
-          <p>my message</p>
-        </h2positive>
-      </ion-item>
-      <ion-item class="item-avatar positive " id="myMessages-list-item18">
-        <h2positive>User W
-          <p>my message</p>
-        </h2positive>
-      </ion-item>
-      <ion-item class="item-avatar positive" id="myMessages-list-item19">
-        <h2positive>User W
-          <p>my message</p>
-        </h2positive>
-      </ion-item>
-      <ion-item class="item-avatar positive" id="myMessages-list-item20">
-        <h2positive>User W
-          <p>my message</p>
-        </h2positive>
-      </ion-item>
-      <ion-item class="item-avatar positive" id="myMessages-list-item21">
-        <h2positive>User W
-          <p>my message</p>
-        </h2positive>
-      </ion-item>
-      <ion-item class="item-avatar positive" id="myMessages-list-item22">
-        <h2positive>User W
-          <p>my message</p>
-        </h2positive>
-      </ion-item>
+    <ion-list ng-repeat="cnv in conv" id="myMessages-list6">
+        <ion-item ng-click="clickmessage($index)"   class="item-avatar positive" id="myMessages-list-item16" ui-sref="tabsController.userx">
+          <h2positive>{{cnv.conversation[2].sender}}
+            <p>{{cnv.subject}}</p>
+          </h2positive>
+        </ion-item>
+
     </ion-list>
   </ion-content>
 </ion-view>

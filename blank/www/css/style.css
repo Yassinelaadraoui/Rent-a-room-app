@@ -11,8 +11,9 @@ background-color: #0a9dc7;
 }
 #chatinput{
   background-color: #0a9dc7;
-    width: 100%;
-    color: grey;
+    width: 70%;
+    height: 100%;
+    color: white;
 
 }
 ul.rating li {
@@ -26,15 +27,26 @@ ul.rating li i {
 }
 #chatfooter{
   position:absolute;
-  bottom:8%;
+  color: white;
+  bottom:9%;
     width: 100%;
+    height: 8%;
 
 }
 .messages{
-  background-color: #0a9dc7;
+  background-color: #f1f1f1;
   color: white;
-  border-radius: 30%;
+  border-radius: 10%;
+  width: 10em;
+  right : 0;
+  padding-left: 20px;
 
+  margin-top: 10px;
+
+
+}
+.messages:hover{
+    border-bottom: 2px solid #0a9dc7 ;
 }
 .mymessage {
   text-align: right;
@@ -44,6 +56,7 @@ ul.rating li i {
 
 #sendbutton{
   background-color:#0a9dc7 ;
+  height: 100%;
 }
 
 #container{
@@ -51,10 +64,13 @@ ul.rating li i {
 
 
 }
-
+#chatinput , #sendbutton{
+  display: inline-block;
+}
 #searchinput{
   margin-bottom: 5px;
   margin-top: -5%;
+  color : white;
 }
 .item-body{
   border-left: 0;
