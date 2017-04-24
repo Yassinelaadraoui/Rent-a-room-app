@@ -95,7 +95,7 @@ angular.module('app.routes', [])
     }
   })
 
-$urlRouterProvider.otherwise('/page1/login')
+$urlRouterProvider.otherwise('/page1/dash')
 
 
 
